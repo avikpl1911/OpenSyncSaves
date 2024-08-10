@@ -2,10 +2,6 @@ package com.app.main;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
-import com.app.model.MainModels;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import java.util.List;
 
 public class Models {
 
