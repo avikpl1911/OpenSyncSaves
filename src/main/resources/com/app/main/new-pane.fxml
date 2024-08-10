@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<StackPane xmlns="http://javafx.com/javafx/11.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.app.main.ToolController"
+           stylesheets="@style.css" styleClass="fieldm"
+>
+
+
+<VBox>
+    <HBox>
+        <TextField fx:id="text_field" promptText="Enter the games name" maxWidth="550" minWidth="550" />
+        <Button text="Search" textAlignment="CENTER" onAction="#onSearch" />
+    </HBox>
+
+    <HBox  >
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10" />
+        </padding>
+        <ImageView fx:id="myimageview" fitWidth="100" fitHeight="100" preserveRatio="true" />
+
+        <Label stylesheets="@style.css"   styleClass="labeltext"  >
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+            HarryPotter
+        </Label>
+    </HBox>
+</VBox>
+</StackPane>
