@@ -5,7 +5,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -83,11 +86,6 @@ private void initialize() {
         imgV.fitHeightProperty().setValue(100);
         imgV.fitWidthProperty().setValue(100);
         imgV.preserveRatioProperty().setValue(true);
-//        lImgv.add(imgV);
-//    imgV.setImage(imgUrl);
-
-
-
         Label nLabel = new Label(res.name);
         Button btn = new Button("add game");
         btn.addEventFilter(ActionEvent.ACTION, new EventHandler<ActionEvent>() {
@@ -95,6 +93,20 @@ private void initialize() {
             public void handle(ActionEvent actionEvent) {
                 System.out.println(res.name);
                 ((Stage)MetaMainBox.getScene().getWindow()).close();
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("final_pane.fxml"));
+                Stage stage = new Stage();
+                Scene scene = null;
+                try {
+                    Parent root = fxmlLoader.load();
+                    FinalPane controller = fxmlLoader.getController();
+                    controller.setData(res);
+                    scene = new Scene(root, 640, 360);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                stage.setTitle("Save Manager");
+                stage.setScene(scene);
+                stage.show();
             }
         });
         nLabel.getStyleClass().add("labeltext");

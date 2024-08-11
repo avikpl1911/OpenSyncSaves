@@ -14,6 +14,7 @@ module com.app.main {
     requires org.json;
     requires com.google.gson;
     requires com.fasterxml.jackson.databind;
+    requires java.desktop;
 
     opens com.app.main to javafx.fxml;
     exports com.app.main;

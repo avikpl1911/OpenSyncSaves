@@ -17,6 +17,7 @@
 >
 
 
+
 <VBox>
     <HBox>
         <TextField fx:id="text_field" promptText="Enter the games name" maxWidth="550" minWidth="550" />
