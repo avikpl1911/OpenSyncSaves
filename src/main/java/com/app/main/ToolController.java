@@ -94,6 +94,7 @@ private void initialize() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 System.out.println(res.name);
+                ((Stage)MetaMainBox.getScene().getWindow()).close();
             }
         });
         nLabel.getStyleClass().add("labeltext");
@@ -104,9 +105,4 @@ private void initialize() {
         MetaMainBox.getChildren().add(nhbox);
 
     }
-
-
-
-
-
 }
