@@ -13,6 +13,7 @@
            xmlns:fx="http://javafx.com/fxml/1"
            fx:controller="com.app.main.ToolController"
            stylesheets="@style.css" styleClass="fieldm"
+           fx:id="PaneStage"
 >
 
 

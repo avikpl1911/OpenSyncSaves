@@ -21,18 +21,23 @@ public class HelloController {
 @FXML
 private BorderPane HelloApplication;
 
+    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("new-pane.fxml"));
+    public Stage stage = new Stage();
+
 
 @FXML
 private void onAddNew() throws IOException {
 //    Parent root = loader.load();
 
-    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("new-pane.fxml"));
     Scene scene = new Scene(fxmlLoader.load(), 640, 360);
-    Stage stage = new Stage();
     stage.setTitle("Save Manager");
     stage.setScene(scene);
     stage.show();
 
+}
+
+public void closeScene(){
+    stage.close();
 }
 
 

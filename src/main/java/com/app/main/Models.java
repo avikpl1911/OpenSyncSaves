@@ -14,7 +14,8 @@ public class Models {
             public String apiVersion;
             @JsonProperty("data")
             public data data;
-
+            @JsonProperty("error")
+            public data error;
         }
 
         public static class data{
@@ -25,6 +26,10 @@ public class Models {
         public static class Result {
             @JsonProperty("adult")
             public boolean adult;
+            @JsonProperty("first_year")
+            public String first_year;
+            @JsonProperty("last_year")
+            public String last_year;
             @JsonProperty("highlight")
             public String highlight;
             @JsonProperty("id")
